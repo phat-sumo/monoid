@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+set -e
+
+cd ./Scripts
+
+./build.py 12 1 ../Source/Monoid.sfdir
+
+cd ./_release
+sudo cp * /usr/share/fonts/TTF/Monoid

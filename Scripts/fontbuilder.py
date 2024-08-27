@@ -93,7 +93,7 @@ def _build(dstdir, font, permutations):
         fnt.close()
 
         # Log progress to prevent timeoout
-        print(str(prcnt) + '%.. ' + name)
+        print((str(prcnt) + '%.. ' + name))
 
 def build(dstdir, font):
     _build(dstdir, font, permutations())
@@ -117,10 +117,11 @@ def Bearing(left=0, right=0):
     """Adjusts the left and/or right bearings of all glyphs"""
     def bearing_op(fnt):
         for glyph in fnt.glyphs():
+            print(f"{left=}, {right=}")
             if left != 0:
-                glyph.left_side_bearing += left
+                glyph.left_side_bearing = int(glyph.left_side_bearing) + left
             if right != 0:
-                glyph.right_side_bearing += right
+                glyph.right_side_bearing = int(glyph.right_side_bearing) + right
     return bearing_op
 
 def Swap(glyph1, glyph2):

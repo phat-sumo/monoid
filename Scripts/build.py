@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 # vim: sts=4 sw=4 ts=4 et
 
 from __future__ import print_function
@@ -22,7 +22,7 @@ output = "_release"
 conflicting(
     style('Loose', Bearing(right=128)),
     style('HalfLoose', Bearing(right=64)),
-#   style('normal', Bearing(left=0)),
+    style('normal', Bearing(left=0)),
     style('HalfTight', Bearing(left=-64)),
     style('Tight', Bearing(left=-128))
 )
@@ -30,7 +30,7 @@ conflicting(
 conflicting(
     option('XtraSmall', '13px', Line(1536, 256)),
     option('Small', '14px', Line(1536, 384)),
-#   option('medium', 15px', Line(1664, 384)),
+    option('medium', '15px', Line(1664, 384)),
     option('Large', '16px', Line(1664, 512)),
     option('XtraLarge', '17px', Line(1792, 512))
 )
